@@ -1,0 +1,13 @@
+{
+  "name": "fsworld009.github.io",
+  "version": "1.0.0",
+  "description": "fsworld009 Homepage",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "WorldFS (fsworld009@gmail.com)",
+  "license": "ISC"
+}
