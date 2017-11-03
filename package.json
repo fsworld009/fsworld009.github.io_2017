@@ -3,11 +3,35 @@
   "version": "1.0.0",
   "description": "fsworld009 Homepage",
   "main": "index.html",
-  "dependencies": {},
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "cross-env": "^5.1.1",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.10.0",
+    "eslint-plugin-html": "^3.2.2",
+    "eslint-plugin-vue": "^3.13.1",
+    "file-loader": "^1.1.5",
+    "html-loader": "^0.5.1",
+    "jquery": "^3.2.1",
+    "json-loader": "^0.5.7",
+    "style-loader": "^0.19.0",
+    "url-loader": "^0.6.2",
+    "vue": "^2.5.2",
+    "vue-loader": "^13.3.0",
+    "vue-style-loader": "^3.0.3",
+    "vue-template-compiler": "^2.5.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4",
+    "webpack-hot-middleware": "^2.20.0",
+    "webpack-module-hot-accept": "^1.0.5"
+  },
   "devDependencies": {},
   "scripts": {
+    "dev-server": "webpack-dev-server --config webpack.dev-server.config.js --inline --progress --colors --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "WorldFS (fsworld009@gmail.com)",
-  "license": "ISC"
+  "license": "MIT"
 }
