@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 var config = {
     entry: {
-        index: ["webpack-hot-middleware/client", path.resolve(__dirname, 'source/index.js')]
+        index: [path.resolve(__dirname, 'source/index.js')]
     },
     resolve: {
         extensions: ['.js', '.vue', '.json'],
@@ -65,7 +65,7 @@ var config = {
     },
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
+        //new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
         new webpack.ProvidePlugin({
             $: "jquery",
