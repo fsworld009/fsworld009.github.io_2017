@@ -24,7 +24,7 @@
 
 <style scoped>
 .mobile-menu {
-  z-index: 9999;
+  z-index: 1;
   position: fixed;
   top: 8px;
   right: 15px;

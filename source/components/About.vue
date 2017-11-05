@@ -12,12 +12,13 @@
     <div class="ui raised green segment">
       <h1 class="ui header">About Me</h1>
       <div class="content">
-         I'm currently living in Taiwan.
+         
          As a programmer, I also like to play around with different programming languages. I've written programs in C/C++, JAVA, and python. Please check my projects for more details.
 
 Although I'm focusing on front-end website development now, I'm also open to any kind of software development opportunities. Please feel free to contact me. 
       </div>
     </div>
+
     <div class="ui raised green segment">
       <h1 class="ui header">Experience</h1>
       <div class="content">
@@ -53,8 +54,12 @@ Franklin International Education Group, Taipei City, Taiwan
 	● Offered different search options to find products on the website
 	● Provided a back-end system to update the website
  -->
+
       </div>
     </div>
+
+    <app-contact></app-contact>
+    
   </div>
 </template>
 
@@ -64,9 +69,12 @@ Franklin International Education Group, Taipei City, Taiwan
 
 
 <script>
+
+import Contact from "./Contact.vue";
+
 export default {
-  data: function(){
-    return{};
-  }
+  components: {
+    "app-contact": Contact
+    }
 }
 </script>
