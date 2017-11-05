@@ -1,9 +1,8 @@
 <template>
   <div>
     <app-menu></app-menu>
-    <div class="ui main text container">
-      <p>{{message}}</p>
-      <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+    <div class="ui main container">
+      <app-about></app-about>
     </div>
   </div>
 </template>
@@ -25,7 +24,8 @@ export default {
     };
   },
   components: {
-    "app-menu": Menu
+    "app-menu": Menu,
+    "app-about": About
   }
 };
 </script>

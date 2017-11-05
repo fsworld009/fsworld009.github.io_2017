@@ -10,7 +10,7 @@
     </div>
     <div class="tablet or lower only mobile-menu">
       <div class="ui pointing dropdown top right  item">
-        <i class="big list layout icon blue"></i>
+        <i class="big list layout icon blue" ></i>
         <div class="ui menu inverted blue tablet or lower only">
           <a href="#" class="item text white"><i class="icon user circle"></i> Profile</a>
           <a href="#" class="item text white"><i class="icon rocket"></i> Projects</a>
@@ -24,6 +24,7 @@
 
 <style scoped>
 .mobile-menu {
+  z-index: 9999;
   position: fixed;
   top: 8px;
   right: 15px;
