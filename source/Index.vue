@@ -1,8 +1,8 @@
 <template>
   <div>
-    <app-menu></app-menu>
+    <Menu></Menu>
     <div class="ui main container">
-      <app-about></app-about>
+      <About></About>
     </div>
   </div>
 </template>
@@ -18,14 +18,14 @@
 import About from "./components/About.vue";
 import Menu from "./components/Menu.vue";
 export default {
-  data: function(){
+  data (){
     return {
       message: "Hello World"
     };
   },
   components: {
-    "app-menu": Menu,
-    "app-about": About
+    Menu,
+    About
   }
 };
 </script>
