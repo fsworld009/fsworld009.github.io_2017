@@ -5,7 +5,7 @@ require('./semantic/semantic.css');
 require('./semantic/semantic.js');
 
 new Vue({
-  el: "#app",
+    el: "#app",
     template: '<Index/>',
     components: {Index}
 });

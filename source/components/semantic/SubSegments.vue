@@ -1,18 +1,27 @@
 <template>
   <div class="ui stacked segments">
       <template v-for="(item, index) in items">
-        <div class="ui segment" :key="index" >
+        <Segment :key="index" v-bind="item.segmentProps">
           <slot :item="item">
             {{item}}
           </slot>
-        </div>
+        </Segment>
       </template>
   </div>
 </template>
 
 <script>
+import Segment from './Segment.vue';
 export default {
-  props: ['items']
+  props: {
+    items: {
+      type: Array
+    }, 
+    segmentProps: {
+      type:Object
+    }
+  },
+  components: {Segment}
 }
 </script>
 

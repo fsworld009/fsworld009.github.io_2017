@@ -1,8 +1,11 @@
 <template>
   <div>
-    <Menu></Menu>
+    <Menu/>
     <div class="ui main container">
-      <About></About>
+      <Title/>
+      <About/>
+      <Experience/>
+      <Contact/>
     </div>
   </div>
 </template>
@@ -15,7 +18,10 @@
 
 
 <script>
+import Title from "./components/Title";
 import About from "./components/About.vue";
+import Experience from "./components/Experience";
+import Contact from "./components/Contact";
 import Menu from "./components/Menu.vue";
 export default {
   data (){
@@ -24,8 +30,11 @@ export default {
     };
   },
   components: {
+    Title,
     Menu,
-    About
+    About,
+    Experience,
+    Contact
   }
 };
 </script>
