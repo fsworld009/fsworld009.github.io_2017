@@ -16,7 +16,7 @@ let json = require("../json/contact");
 
 export default {
   data: function(){
-    return json;
+    return {contacts: json};
   },
   components: {
     Segment,

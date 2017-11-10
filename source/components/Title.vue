@@ -3,7 +3,7 @@
       <h1 class="ui header">
         <img src="protrait.png">
         <div class="content">
-          Andy Lee
+          <span style="font-size:3.2rem">Andy Lee</span>
           <div class="sub header">Software developer specialized in javascript, Html, and CSS</div>
         </div>
       </h1>

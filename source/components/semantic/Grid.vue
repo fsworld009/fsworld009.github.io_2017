@@ -1,5 +1,5 @@
 <template>
-  <div class="ui two column stretched grid ">
+  <div class="ui stretched grid doubling stackable">
     <template v-for="(item, index) in items">
         <div class="column" :key="index" v-bind="item.columnProps">
           <slot :item="item">
@@ -9,12 +9,6 @@
       </template>
   </div>
 </template>
-
-<style scoped>
-/* .ui.grid .column {
-  padding: 0;
-} */
-</style>
 
 
 <script>

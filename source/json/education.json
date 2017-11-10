@@ -1,18 +1,16 @@
-{
-    "education":[
-        {
-            "degree":"Master of Science in Computer Science",
-            "dateString": "May 2014",
-            "name": "The University of Texas at Dallas",
-            "location": "Richardson, Texas, United States",
-            "gpa": 3.97
-        },
-        {
-            "degree":"Bachelor of Science in Computer Science & Engineering",
-            "dateString": "June 2010",
-            "name": "National Taiwan Ocean University",
-            "location": "Keelung, Taiwan",
-            "gpa": 3.9
-        }
-    ]
-}
+[
+    {
+        "degree":"Master of Science in Computer Science",
+        "dateString": "May 2014",
+        "name": "The University of Texas at Dallas",
+        "location": "Richardson, Texas, United States",
+        "gpa": 3.97
+    },
+    {
+        "degree":"Bachelor of Science in Computer Science & Engineering",
+        "dateString": "June 2010",
+        "name": "National Taiwan Ocean University",
+        "location": "Keelung, Taiwan",
+        "gpa": 3.9
+    }
+]

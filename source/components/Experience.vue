@@ -18,13 +18,14 @@ let json = require('../json/experience.json');
 
 export default {
   data: function(){
-    return Object.assign({
+    return {
       segmentProps: {
         headerSize: 4,
         headerClass: "green"
       },
-      segmentClass: ""
-    },json);
+      segmentClass: "",
+      positions: json
+    };
   },
   computed: {
     compPositions () {
