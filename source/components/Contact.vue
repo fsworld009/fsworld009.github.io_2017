@@ -1,20 +1,18 @@
 <template>
-  <div class="ui raised red segment">
-    <h1 class="ui header">Contact</h1>
-    <div class="content">
-      <div class="ui segments">
-        <template v-for="contact in contacts">
-          <div class="ui segment" :key="contact.link">
-            <a :href="contact.link" taget="_blank"><i :class="'large icon '+contact.color+ ' '+ contact.icon"></i> {{contact.text}}</a>
-          </div>
-        </template>
-      </div>
-    </div>
-  </div>
+  <Segment class="red" header="Contact">
+    <SubSegments :items="contacts">
+      <template slot-scope="{item}">
+        <a :href="item.link" taget="_blank"><i :class="'large icon '+item.color+ ' '+ item.icon"></i> {{item.text}}</a>
+      </template>
+    </SubSegments>
+  </Segment>
 </template>
 
 
 <script>
+import Segment from "./semantic/Segment.vue";
+import SubSegments from "./semantic/SubSegments";
+
 export default {
   data: function(){
     return {
@@ -26,6 +24,10 @@ export default {
         {"icon": "linkedin square", "color": "blue", "text": "LinkedIn", "link": "https://linkedin.com/in/lycecs9130"}
       ]
     }
+  },
+  components: {
+    Segment,
+    SubSegments
   }
 }
 </script>
