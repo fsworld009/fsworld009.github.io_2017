@@ -1,5 +1,5 @@
 <template>
-  <div class="ui grid container">
+  <div class="ui two column stretched grid ">
     <template v-for="(item, index) in items">
         <div class="column" :key="index" v-bind="item.columnProps">
           <slot :item="item">
@@ -27,7 +27,7 @@ export default {
     columnProps: {
       type:Object
     },
-    borderStyle: {
+    borderClass: {
       type: String
     }
   },

@@ -1,5 +1,5 @@
 <template>
-  <Segment class="red" header="Contact">
+  <Segment class="purple" header="Contact" headerClass="brown">
     <SubSegments :items="contacts">
       <template slot-scope="{item}">
         <a :href="item.link" taget="_blank"><i :class="'large icon '+item.color+ ' '+ item.icon"></i> {{item.text}}</a>

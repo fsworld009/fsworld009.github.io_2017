@@ -1,7 +1,7 @@
 <template>
-  <div :class="'ui segments ' +(typeof borderStyle === 'undefined'? 'stacked':'')">
+  <div :class="'ui segments ' +(typeof borderClass === 'undefined'? 'stacked':'')">
       <template v-for="(item, index) in items">
-        <Segment :key="index" v-bind="Object.assign({},item.segmentProps,segmentProps)">
+        <Segment :key="index" v-bind="Object.assign({},item.segmentProps,segmentProps)" :class="segmentClass">
           <slot :item="item">
             {{item}}
           </slot>
@@ -20,8 +20,11 @@ export default {
     segmentProps: {
       type:Object
     },
-    borderStyle: {
+    borderClass: {
       type: String
+    },
+    segmentClass: {
+      type: [String, Object]
     }
   },
   components: {Segment}

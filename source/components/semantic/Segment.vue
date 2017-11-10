@@ -1,7 +1,7 @@
 <template>
-  <div :class="'ui segment '+(typeof borderStyle=='undefined'? 'raised':''  )">
+  <div :class="'ui segment '+(typeof borderClass=='undefined'? 'raised':''  )">
     <template v-if="header">
-      <component :is="headerSize? 'h'+headerSize : 'h1'" class="ui header">{{header}}
+      <component :is="headerSize? 'h'+headerSize : 'h1'" :class="'ui header '+headerClass">{{header}}
         <div class="sub header" v-if="subHeader" v-html="subHeader" />
       </component>
       <div class="content">
@@ -17,6 +17,6 @@
 
 <script>
 export default {
-  props: ['header','headerSize', 'subHeader','borderStyle']
+  props: ['header','headerSize', 'subHeader','borderClass', 'headerClass']
 }
 </script>
