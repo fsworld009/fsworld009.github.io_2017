@@ -72,6 +72,7 @@ var config = {
             jQuery: "jquery"
         })
   ],
+  devtool: "#source-map",
   devServer: {
       contentBase: './source/',
       port: 3000,
