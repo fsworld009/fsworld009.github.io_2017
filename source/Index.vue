@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Menu/>
+    <MyMenu/>
     <div class="ui main container">
-      <Title/>
+      <MyTitle/>
       <About/>
       <Experience/>
       <Contact/>
@@ -18,11 +18,11 @@
 
 
 <script>
-import Title from "./components/Title";
+import MyTitle from "./components/Title";
 import About from "./components/About.vue";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
-import Menu from "./components/Menu.vue";
+import MyMenu from "./components/Menu.vue";
 export default {
   data (){
     return {
@@ -30,8 +30,8 @@ export default {
     };
   },
   components: {
-    Title,
-    Menu,
+    MyTitle,
+    MyMenu,
     About,
     Experience,
     Contact

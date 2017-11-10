@@ -1,5 +1,5 @@
 <template>
-  <div :class="'ui segment ' ">
+  <div :class="'ui segment '+(typeof borderStyle=='undefined'? 'raised':''  )">
     <template v-if="header">
       <component :is="headerSize? 'h'+headerSize : 'h1'" class="ui header">{{header}}
         <div class="sub header" v-if="subHeader" v-html="subHeader" />

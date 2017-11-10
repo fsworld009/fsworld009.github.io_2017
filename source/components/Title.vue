@@ -1,5 +1,5 @@
 <template>
-  <div class="ui raised green segment">
+  <div class="ui raised purple segment">
       <h1 class="ui header">
         <img src="protrait.png">
         <div class="content">
