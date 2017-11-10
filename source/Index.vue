@@ -5,6 +5,7 @@
       <MyTitle/>
       <About/>
       <Experience/>
+      <Education/>
       <Contact/>
     </div>
   </div>
@@ -20,8 +21,9 @@
 <script>
 import MyTitle from "./components/Title";
 import About from "./components/About.vue";
-import Experience from "./components/Experience";
-import Contact from "./components/Contact";
+import Experience from "./components/Experience.vue";
+import Education from "./components/Education.vue"
+import Contact from "./components/Contact.vue";
 import MyMenu from "./components/Menu.vue";
 export default {
   data (){
@@ -34,6 +36,7 @@ export default {
     MyMenu,
     About,
     Experience,
+    Education,
     Contact
   }
 };

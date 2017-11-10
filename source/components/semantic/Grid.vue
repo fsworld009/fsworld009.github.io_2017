@@ -1,14 +1,21 @@
 <template>
-  <div :class="'ui segments ' +(typeof borderStyle === 'undefined'? 'stacked':'')">
-      <template v-for="(item, index) in items">
-        <Segment :key="index" v-bind="Object.assign({},item.segmentProps,segmentProps)">
+  <div class="ui grid container">
+    <template v-for="(item, index) in items">
+        <div class="column" :key="index" v-bind="item.columnProps">
           <slot :item="item">
             {{item}}
           </slot>
-        </Segment>
+        </div>
       </template>
   </div>
 </template>
+
+<style scoped>
+/* .ui.grid .column {
+  padding: 0;
+} */
+</style>
+
 
 <script>
 import Segment from './Segment.vue';
@@ -17,7 +24,7 @@ export default {
     items: {
       type: Array
     }, 
-    segmentProps: {
+    columnProps: {
       type:Object
     },
     borderStyle: {
@@ -27,4 +34,3 @@ export default {
   components: {Segment}
 }
 </script>
-

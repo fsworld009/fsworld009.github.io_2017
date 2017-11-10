@@ -1,0 +1,40 @@
+{
+    "contacts": [
+        {
+            "icon": "mail",
+            "color": "red",
+            "text": "Email (Primary)",
+            "link": "mailto:fsworld009@gmail.com"
+        },
+        {
+            "icon": "mail",
+            "color": "red",
+            "text": "Email (Work-specific)",
+            "link": "mailto:lycecs9130@gmail.com"
+        },
+        {
+            "icon": "github",
+            "color": "black",
+            "text": "Github",
+            "link": "https://github.com/fsworld009"
+        },
+        {
+            "icon": "twitter",
+            "color": "teal",
+            "text": "Twitter",
+            "link": "https://twitter.com/fsworld009"
+        },
+        {
+            "icon": "linkedin square",
+            "color": "blue",
+            "text": "LinkedIn",
+            "link": "https://linkedin.com/in/lycecs9130"
+        },
+        {
+            "icon": "pencil",
+            "color": "black",
+            "text": "Blog",
+            "link": "https://fsworld009.github.io/blog/"
+        }
+    ]
+}

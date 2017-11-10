@@ -1,0 +1,38 @@
+{
+    "positions": [
+        {
+            "title": "Front-End Web Developer",
+            "location": "Inpensa, Edison, New Jersey, United States",
+            "dateString": "January 2015 – August 2017",
+            "descriptions": [
+                "Created customized frozen-column and fixed-header HTML tables",
+                "Dynamically generated page layout based on user configuration",
+                "Migrated code base to Backbone.js framework",
+                "Populated graphs and charts with Highcharts",
+                "Updated only partial sections without reloading the whole page after user actions",
+                "Used jQuery for AJAX data loading and updating"
+            ]
+        },
+        {
+            "title": "Junior Front-End Consultant",
+            "location": "Technomax LLC, Princeton Junction, New Jersey, United States",
+            "dateString": "September 2014 – January 2015",
+            "descriptions": [
+                "Designed web pages with HTML5 and CSS3 standard",
+                "Used AJAX to communicate with server and exchange JSON data",
+                "Developed and practice popular libraries and frameworks such as Twitter Bootstrap, jQuery and AngularJS"
+            ]
+        },
+        {
+            "title": "Website Designer",
+            "location": "Franklin International Education Group, Taipei City, Taiwan",
+            "dateString": "November 2011 – May 2012",
+            "descriptions": [
+                "Developed a database website for the company with PHP Framework CodeIgniter and MySQL database",
+                "Identified and analyzed user requirements, and designed website and database structure",
+                "Offered different search options to find products on the website",
+                "Provided a back-end system to update the website"
+            ]
+        }
+    ]
+}

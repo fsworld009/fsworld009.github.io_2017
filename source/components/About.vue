@@ -1,7 +1,8 @@
 <template>
   <Segment class="green" header="About Me">
-    <p> </p>
-    <p>As a developer, I also like to play around with different programming languages. I've written programs in C/C++, JAVA, and python. Please check my projects for more details. Although I'm focusing on front-end website development now, I'm also open to any kind of software development opportunities. Please feel free to contact me. </p>
+    <p></p>
+    <p>Although my primary language is javascript, I don't limit myself to javascript development. I have spent my free time learning new programming languages, libraries, or frameworks. See my personal projects at <a href="#Projects">Projects</a>. </p>
+    <p></p>
   </Segment>
 </template>
 
