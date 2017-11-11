@@ -15,7 +15,7 @@ import SubSegments from "./semantic/SubSegments";
 let json = require("../json/contact");
 
 export default {
-  data: function(){
+  data(){
     return {contacts: json};
   },
   components: {

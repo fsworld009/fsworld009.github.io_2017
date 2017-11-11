@@ -27,7 +27,7 @@ import Grid from "./semantic/Grid.vue";
 let json = require('../json/education.json');
 
 export default {
-  data: function(){
+  data(){
     return {
       education: json
     };

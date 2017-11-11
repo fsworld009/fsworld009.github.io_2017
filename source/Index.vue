@@ -2,12 +2,16 @@
   <div>
     <MyMenu/>
     <div class="ui main container">
+      
       <MyTitle/>
+      <a name="profile"></a>
       <About/>
       <Experience/>
       <Education/>
       <PhotoswipePlaceholder/>
+      <a name="projects"></a>
       <Projects/>
+      <a name="contact"></a>
       <Contact/>
     </div>
   </div>

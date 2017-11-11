@@ -107,7 +107,7 @@ export default {
         this.photoswipeInit=true;
     },
 
-    onShowPhoto: function(event){
+    onShowPhoto(event){
       
       let $el = $(event.currentTarget);
       console.log("onShowPhoto", this, $el);

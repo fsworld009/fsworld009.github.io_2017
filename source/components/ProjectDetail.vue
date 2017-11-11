@@ -61,9 +61,9 @@ export default {
     createModal(){
       var $modal = $(this.$el);
       $modal.modal({
-        onHidden: function(){
+        onHidden: () => {
           this.$emit("closeModal");
-        }.bind(this)
+        }
       });
     }
   },
