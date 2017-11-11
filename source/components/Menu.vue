@@ -37,7 +37,7 @@
 export default {
   mounted: function() {
     this.createDropdown();
-    $(window).off("resize.menu").on("resize.menu", function(){
+    $(window).off("orientationchange.menu resize.menu").on("orientationchange.menu resize.menu", function(){
       if($(this.$el).find(".tablet-menu").is(":visible") && $(this.$el).find(".mobile-menu").find(".ui.menu").hasClass("visible")){
         $(this.$el).find(".mobile-menu").find(".ui.dropdown").dropdown("hide");
       }
@@ -50,7 +50,7 @@ export default {
   },
   beforeDestroy: function(){
     this.destroyDropdown();
-    $(window).off("resize.menu");
+    $(window).off(".menu");
   }, 
   methods: {
     createDropdown: function(){

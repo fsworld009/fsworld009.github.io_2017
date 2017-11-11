@@ -1,8 +1,7 @@
 <template>
   <Segment class="blue secondary" header="Projects" headerClass="brown">
     <Grid :items="projects" class="three column">
-      <template slot-scope="{item}">
-        <!-- <Segment borderClass="stacked" :header="item.degree" :subHeader="item.name + ', ' + item.dateString + ', ' + item.location" headerSize="4" headerClass="violet"> -->
+      <template slot-scope="{item, index}">
         <Panel :header="item.title" :subHeader="item.date">
           <div class="project-desc">
             {{ item.brief || item.description}}
@@ -16,11 +15,12 @@
           </div>
           
           <div class="ui right aligned container">
-            <a href="javascript:void(0)"><i class="icon big zoom"></i></a>
+            <a href="javascript:void(0)" @click="showProjectDetail($event, index)"><i class="icon big zoom"></i></a>
           </div>
         </Panel>
       </template>
     </Grid>
+    <ProjectDetail :project="selectedProject" @closeModal="onCloseDetail"/>
   </Segment>
 </template>
 
@@ -34,40 +34,32 @@
 <script>
 import Panel from "./semantic/Panel.vue";
 import Segment from "./semantic/Segment.vue";
-import Grid from "./semantic/Grid.vue"
+import Grid from "./semantic/Grid.vue";
+import ProjectDetail from "./ProjectDetail.vue";
 let json = require('../json/projects.json');
 
 export default {
-  // data: function(){
-  //   return Object.assign({
-  //     segmentProps: {
-  //       headerSize: 4,
-  //       headerClass: "green"
-  //     },
-  //     segmentClass: ""
-  //   },json);
-  // },
-  // computed: {
-  //   compPositions () {
-  //     return this.positions.map( (position) => {
-  //       position.segmentProps = {
-  //         header: position.title,
-  //         subHeader: position.location + "<br/>" + position.dateString
-  //       }
-  //       return position;
-  //     });
-  //   }
-  // },
-  data: function(){
+  data(){
     return {
-      projects: json
+      projects: json,
+      selectedProject: {}
     }
   },
   components: {
     Segment,
     Panel,
-    Grid
+    Grid,
+    ProjectDetail
     // SubSegments
+  },
+  methods: {
+    showProjectDetail(event, index){
+      this.$data.selectedProject = this.$data.projects[index];
+    },
+    onCloseDetail(){
+        //clean up project data so that 'updated' callback is always triggered on user click
+        this.$data.selectedProject={};
+    }
   }
 }
 </script>
