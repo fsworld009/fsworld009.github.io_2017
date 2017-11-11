@@ -2,9 +2,7 @@
   <Segment class="yellow secondary" header="Experience" headerClass="brown">
     <SubSegments :items="compPositions" :segmentProps="segmentProps" :segmentClass="segmentClass">
       <template slot-scope="{item}">
-        <div class="ui bulleted list" v-for="(description, index) in item.descriptions" :key="index">
-          <div class="item"> {{description}} </div>
-        </div> 
+        <BulletedList :items="item.descriptions"/>
       </template>
     </SubSegments>
   </Segment>
@@ -13,11 +11,12 @@
 
 <script>
 import Segment from "./semantic/Segment.vue";
-import SubSegments from "./semantic/SubSegments";
+import SubSegments from "./semantic/SubSegments.vue";
+import BulletedList from "./semantic/BulletedtList.vue"
 let json = require('../json/experience.json');
 
 export default {
-  data: function(){
+  data(){
     return {
       segmentProps: {
         headerSize: 4,
@@ -40,7 +39,8 @@ export default {
   },
   components: {
     Segment,
-    SubSegments
+    SubSegments,
+    BulletedList
   }
 }
 </script>

@@ -6,6 +6,7 @@
       <About/>
       <Experience/>
       <Education/>
+      <PhotoswipePlaceholder/>
       <Projects/>
       <Contact/>
     </div>
@@ -27,6 +28,7 @@ import Education from "./components/Education.vue"
 import Projects from "./components/Projects.vue";
 import Contact from "./components/Contact.vue";
 import MyMenu from "./components/Menu.vue";
+import PhotoswipePlaceholder from "./components/PhotoswipePlaceholder.vue";
 export default {
   data (){
     return {
@@ -40,6 +42,7 @@ export default {
     Experience,
     Education,
     Projects,
+    PhotoswipePlaceholder,
     Contact
   }
 };
