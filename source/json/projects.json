@@ -2,8 +2,8 @@
     {
         "title" : "My Portfolio",
         "date" : "Dec 2014 - Current",   
-        "skills" : ["HTML5", "CSS3", "Twitter Bootstrap", "jQuery", "AJAX", "JSON", "emacs"],
-        
+        "skills" : ["HTML5", "CSS3", "Twitter Bootstrap", "jQuery", "Ajax", "JSON"],
+        "brief": "My protfolio website written in Twitter Bootstrap and jQuery.",
         "description" : "This website serves as my self-introduction to other people. It can be viewed on desktop, tablet or mobile devices. I also abstract project listings and descriptions into JSON files so that I can update the site easily in the future.",
         "points" :
         [
@@ -28,7 +28,7 @@
         "title" : "Small widgets",
         "date" : "Nov 2014 - Dec 2014",
         "skills" : ["HTML5", "CSS3", "javascript", "jQuery"],
-        
+        "brief": "Some web pages for practicing HTML5/CSS3/javascript and jQuery.",
         "description" : "Some web pages for practicing HTML5, CSS3 and javascript, including multiple versions of analog clock and star rating.",
         "points" :
         [
@@ -60,7 +60,7 @@
         "title" : "A Fast Solution for Network Design",
         "date" : "Feb 2014",
         "skills" : ["Java", "python", "python-igraph"],
-    
+        "brief" : "Implemented an algorithm covered in class, and generated graphs by using python-igraph.",
         "description" : "A linear programming algorithm in order to find a network design that has the minimal cost in a given network graph.",
         "points" :
         [
@@ -154,9 +154,9 @@
         ]
     },
     {
-        "title" : "Distributed Mutual Exclusion Algorithm",
+        "title" : "(Team) Distributed Mutual Exclusion Algorithm",
         "date" : "Sep 2013 - Dec 2013",
-        "skills" : ["Java", "python", "python-igraph"],
+        "skills" : ["C/C++", "Unix", "Socket Programming"],
     
         "description" : "A quorum-based and token-based mutual exclusion algorithm in a distributed system.",
         "points" :
@@ -184,9 +184,9 @@
     {
         "title" : "JTChat",
         "date" : "Jul 2013 - Aug 2013",   
-        "skills" : ["HTML5", "CSS3", "Twitter Bootstrap", "jQuery", "AJAX", "JSON", "emacs"],
-        
-        "description" : "An Internet Relay Chat (IRC) program designed for users of a popular video streaming website, Twitch.",
+        "skills" : ["Java", "Java Swing", "Socket Programming"],
+        "brief": "An IRC client written in Java Swing",
+        "description" : "An Internet Relay Chat (IRC) program designed for users of a popular video streaming website, Twitch.tv.",
         "points" :
         [
             "Implemented a simple IRC bot by Java TCP socket packages.",
