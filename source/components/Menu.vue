@@ -2,20 +2,18 @@
   <div>
     <div class="ui fixed inverted menu blue tablet or lower hidden tablet-menu">
       <div class="ui right menu inverted blue">
-        <a href="#profile" class="item"><i class="icon user circle"></i> Profile</a>
-        <a href="#projects" class="item"><i class="icon rocket"></i> Projects</a>
-        <a href="#contact" class="item"><i class="icon address book"></i> Contact</a>
-        <a href="https://fsworld009.github.io/blog/" target="_blank" class="item"><i class="icon write"></i> Blog</a>
+        <template v-for="(menu, index) in menuItems">
+          <a  :key="index" :href="menu.link" class="item" :target="menu.target||''"><i :class="'icon '+menu.icon"></i> {{menu.text}}</a>
+        </template>
       </div>
     </div>
     <div class="tablet or lower only mobile-menu">
       <div class="ui pointing dropdown top right  item">
         <i class="big list layout icon blue" ></i>
         <div class="ui menu inverted blue tablet or lower only">
-          <a href="#profile" class="item text white"><i class="icon user circle"></i> Profile</a>
-          <a href="#projects" class="item text white"><i class="icon rocket"></i> Projects</a>
-          <a href="#contact" class="item text white"><i class="icon address book"></i> Contact</a>
-          <a href="https://fsworld009.github.io/blog/" target="_blank" class="item text white"><i class="icon write"></i> Blog</a>
+          <template v-for="(menu, index) in menuItems">
+            <a  :key="index" :href="menu.link" class="item text white" :target="menu.target||''"><i :class="'icon '+menu.icon"></i> {{menu.text}}</a>
+          </template>
         </div>
       </div>
     </div>
@@ -35,6 +33,16 @@
 
 <script>
 export default {
+  data(){
+    return {
+      "menuItems":[
+        {"icon":"user circle", "text":"Profile", "link":"#profile"},
+        {"icon":"rocket", "text":"Projects", "link":"#projects"},
+        {"icon":"address book", "text":"Contact", "link":"#contact"},
+        {"icon":"write", "text":"Blog", "link":"https://fsworld009.github.io/blog/", "target":"_blank"},
+      ]
+    }
+  },
   mounted() {
     this.createDropdown();
     $(window).off("orientationchange.menu resize.menu").on("orientationchange.menu resize.menu", () => {
