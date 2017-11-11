@@ -10,7 +10,20 @@
         {{project.description}}
       </h5>
       <BulletedList :items="project.points" v-if="project.points"/>
+      
       <Photoswipe :photoId="project.id" :photos="project.screenshots" v-if="project.screenshots"/>
+      
+      <h2 class="ui green header" v-if="project.links">Link(s)</h2>
+      <BulletedList :items="project.links" v-if="project.links">
+        <template slot-scope="{item}">
+          <a :href="item.url" target="_blank">{{item.name}}</a>
+        </template>
+      </BulletedList>
+      
+    </div>
+
+    <div class="actions">
+      <button class="ui button red inverted">Close</button>
     </div>
   </div>
 </template>

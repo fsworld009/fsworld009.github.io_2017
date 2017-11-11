@@ -68,11 +68,13 @@
     </div>
 
     <!-- template for thumbnails -->
-    <template v-for="(photo, index) in compPhotos" >
-      <a :href="photo.src" class="screenshots-click" :key="index">
-        <img class="ui image" :title="photo.caption" :src="photo.thumbnail">&nbsp;
-      </a>
-    </template>
+    <div>
+      <template v-for="(photo, index) in compPhotos" >
+        <a :href="photo.src" class="screenshots-click" :key="index" @click.prevent="onShowPhoto">
+          <img class="ui image" :title="photo.caption" :src="photo.thumbnail">&nbsp;
+        </a>
+      </template>
+    </div>
     <!-- {{compPhotos}} -->
 
   </div>
@@ -88,6 +90,11 @@
 
 
 <script>
+
+require('../photoswipe/photoswipe.css');
+var PhotoSwipe = require('../photoswipe/photoswipe.js');
+var PhotoSwipeUI_Default = require('../photoswipe/photoswipe-ui-default.js');
+require('../photoswipe/default-skin/default-skin.css');
 
 var photoswipe = function(){
     var items = null;
@@ -106,27 +113,26 @@ var photoswipe = function(){
         });
     }
 
+    function clear_item(){
+      items=[];
+    }
+
     function show(index){
         var pswpElement = document.querySelectorAll('.pswp')[0];
         if(items === null){
             return;
         }
         options.index = index;
-        destroy();
+        console.log("before enter destroy", gallery);
+        // destroy();
         gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
         gallery.init();
-    }
-
-    function destroy(){
-      if(gallery){
-          gallery.destroy();
-      }
     }
 
     return{
         push_item: push_item,
         show: show,
-        destroy: destroy
+        clear_item: clear_item
     };
 }();
 
@@ -157,22 +163,23 @@ export default {
     }
   },
   
-  mounted(){
-    this.showPhotos();
-  },
-  updated(){
-    this.showPhotos();
-  },
-  beforeDestroy(){
-    //photoswipe.destroy();
-  }, 
-
   methods: {
-    showPhotos(){
-      if(this.photos.length > 0){
+    initPhotoswipe(){
+        photoswipe.clear_item();
+        if(this.compPhotos.length > 0){
+          this.compPhotos.forEach(function(photo, index){
+            photoswipe.push_item(photo.src, photo.width, photo.height, photo.caption);
+          });
+        }
+        this.photoswipeInit=true;
+    },
 
-        //photoswipe.show();
-      }
+    onShowPhoto: function(event){
+      
+      let $el = $(event.currentTarget);
+      console.log("onShowPhoto", this, $el);
+      this.initPhotoswipe();
+      photoswipe.show($el.index());
     }
   }
 }
