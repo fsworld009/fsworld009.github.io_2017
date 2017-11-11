@@ -2,15 +2,29 @@
   <div class="ui modal scrolling">
     <i class="close icon"></i>
     <div class="header">
-      Modal Title
+      <h2 class="ui header blue">{{project.title}}
+      </h2>
     </div>
     <div class="scrolling content">
-      {{project}}
+      <h5 class="ui header">
+        {{project.description}}
+      </h5>
+      <BulletedList :items="project.points" v-if="project.points"/>
+      <Photoswipe :photoId="project.id" :photos="project.screenshots" v-if="project.screenshots"/>
     </div>
   </div>
 </template>
 
+<style scoped>
+img {
+  display: inline;
+}
+</style>
+
+
 <script>
+import BulletedList from "./semantic/BulletedtList.vue";
+import Photoswipe from "./Photoswipe.vue";
 export default {
   props: {
     project: {
@@ -39,6 +53,10 @@ export default {
         }.bind(this)
       });
     }
+  },
+  components: {
+    BulletedList,
+    Photoswipe
   }
 }
 </script>

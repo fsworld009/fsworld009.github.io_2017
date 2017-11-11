@@ -1,5 +1,6 @@
 [
     {
+        "id": "my_portfolio",
         "title" : "My Portfolio",
         "date" : "Dec 2014 - Current",   
         "skills" : ["HTML5", "CSS3", "Twitter Bootstrap", "jQuery", "Ajax", "JSON"],
@@ -25,6 +26,7 @@
         ]
     },
     {
+        "id": "small_widgets",
         "title" : "Small widgets",
         "date" : "Nov 2014 - Dec 2014",
         "skills" : ["HTML5", "CSS3", "javascript", "jQuery"],
@@ -57,6 +59,7 @@
         ]
     },
     {
+        "id": "lpfastsolution",
         "title" : "A Fast Solution for Network Design",
         "date" : "Feb 2014",
         "skills" : ["Java", "python", "python-igraph"],
@@ -88,6 +91,7 @@
         ]
     },
     {
+        "id": "sipua",
         "title" : "(Team Project) SIP User Agent Remote Controller",
         "date" : "Sep 2013 - Dec 2013",
         "skills" : ["Java", "Java Swing", "Java Applet", "HTML4/CSS2"],
@@ -154,6 +158,7 @@
         ]
     },
     {
+        "id": "aosproject",
         "title" : "(Team) Distributed Mutual Exclusion Algorithm",
         "date" : "Sep 2013 - Dec 2013",
         "skills" : ["C/C++", "Unix", "Socket Programming"],
@@ -182,6 +187,7 @@
         ]
     },
     {
+        "id": "jtchat",
         "title" : "JTChat",
         "date" : "Jul 2013 - Aug 2013",   
         "skills" : ["Java", "Java Swing", "Socket Programming"],
@@ -222,6 +228,7 @@
         ]
     },
     {
+        "id": "blockattack",
         "title" : "Block Attack",
         "date" : "Jun 2013",
         "skills" : ["python", "pygame", "OOP"],
@@ -254,6 +261,7 @@
         ]
     },
     {
+        "id": "dbproject",
         "title" : "(Team) Insurance Management Database System",
         "date" : "Jan 2013 - May 2013",
         "skills" : ["SQL", "Unix"],
