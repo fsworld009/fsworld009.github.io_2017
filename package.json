@@ -36,6 +36,7 @@
   "scripts": {
     "dev-server": "webpack-dev-server --config webpack.dev-server.config.js --inline --progress --colors --hot",
     "build": "webpack --config webpack.prod.config.js",
+    "deploy": "./deploy.sh -c deploy.env",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "WorldFS (fsworld009@gmail.com)",

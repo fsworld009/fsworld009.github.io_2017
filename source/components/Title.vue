@@ -1,6 +1,6 @@
 <template>
   <div class="ui raised red segment">
-      <h1 class="ui header">
+      <h1 class="ui header center aligned">
         <img src="protrait.png">
         <div class="content">
           <span style="font-size:3.2rem">Andy Lee</span>

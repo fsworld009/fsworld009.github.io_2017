@@ -82,6 +82,7 @@ var config = {
             template: './source/index.template.html'
         }),
         new CopyWebpackPlugin([
+            {from: "./source/README_master_branch.MD", to: "../README.MD",force: true },
             {from: "./source/*.png", to: "../[name].[ext]",force: true },
             {from: "./source/screenshots", to: "../screenshots",force: true, toType: "dir" },
         ], {
