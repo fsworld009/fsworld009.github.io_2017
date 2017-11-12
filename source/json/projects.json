@@ -1,5 +1,46 @@
 [
     {
+        "id": "myhomepage2017",
+        "title" : "My Portfolio Homepage",
+        "date" : "Nov 2017",   
+        "skills" : ["HTML5", "CSS3", "Vue.js", "Semantic UI", "JSON"],
+        "brief": "My protfolio website written in Vue.js and Semantic UI.",
+        "description" : "My new homepage to demonstrate my Front-End developmenst skill to people. The site is built with the focus on responsive design and the ease to update in long term.",
+        "points" :
+        [
+            "Used Vue.js to construct the website for cleaner code base",
+            "Utilized Responsive Design in Semantic UI",
+            "Plugged in lazy load images feature in Semantic UI",
+            "Generated site data from JSON files, the website can be updated without changing HTML or javascript",
+            "Used webpack for development and final assets deployment"
+        ],
+        "screenshots" :
+        [
+            {
+                "extension": "png",
+                "caption" : "Responsive design (mobile)",
+                "width" : 473,
+                "height" : 756
+            },
+            {
+                "extension": "png",
+                "caption" : "Responsive design (tablet)",
+                "width" : 866,
+                "height" : 576
+            },
+            {
+                "extension": "png",
+                "caption" : "Responsive design (wide screen)",
+                "width" : 1404,
+                "height" : 680
+            }
+        ],
+        "links" :
+        [
+            {"name":"Source Code", "url":"https://github.com/fsworld009/fsworld009.github.io/tree/work_branch"}
+        ]
+    },
+    {
         "id": "my_portfolio",
         "title" : "My Portfolio (2014 version)",
         "date" : "Dec 2014",   
