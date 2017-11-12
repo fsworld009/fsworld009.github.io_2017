@@ -1,5 +1,5 @@
 <template>
-  <Segment class="yellow secondary" header="Experience" headerClass="brown">
+  <Segment class=" secondary" header="Experience" headerClass="brown">
     <SubSegments :items="compPositions" :segmentProps="segmentProps" :segmentClass="segmentClass">
       <template slot-scope="{item}">
         <BulletedList :items="item.descriptions"/>

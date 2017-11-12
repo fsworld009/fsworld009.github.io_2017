@@ -1,8 +1,8 @@
 [
     {
         "id": "my_portfolio",
-        "title" : "My Portfolio",
-        "date" : "Dec 2014 - Current",   
+        "title" : "My Portfolio (2014 version)",
+        "date" : "Dec 2014",   
         "skills" : ["HTML5", "CSS3", "Twitter Bootstrap", "jQuery", "Ajax", "JSON"],
         "brief": "My protfolio website written in Twitter Bootstrap and jQuery.",
         "description" : "This website serves as my self-introduction to other people. It can be viewed on desktop, tablet or mobile devices. I also abstract project listings and descriptions into JSON files so that I can update the site easily in the future.",

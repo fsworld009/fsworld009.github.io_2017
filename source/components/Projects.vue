@@ -1,22 +1,26 @@
 <template>
-  <Segment class="blue secondary" header="Projects" headerClass="brown">
-    <Grid :items="projects" class="three column">
+  <Segment class=" secondary" header="Projects" headerClass="brown">
+    <Grid :items="compProjects" class="three column">
       <template slot-scope="{item, index}">
         <Panel :header="item.title" :subHeader="item.date">
           <div class="project-desc">
             {{ item.brief || item.description}}
             <div class="labels">
               <template v-for="(skill, index) in item.skills">
-                <span class="ui tiny label" :key="index">
+                <span class="ui tiny label orange" :key="index">
                   {{skill}}
                 </span>
               </template>
             </div>
           </div>
-          
-          <div class="ui right aligned container">
-            <a href="javascript:void(0)" @click="showProjectDetail($event, index)"><i class="icon big zoom"></i></a>
+
+          <div class="ui container" style="height:80px">
+            <template v-if="item.screenshots && item.screenshots[0]">
+              <a href="javascript:void(0)" @click="showProjectDetail($event, index)"><img :src="item.screenshots[0].thumbnail" width="80" height="80" align="bottom"/></a>
+            </template>
+            <a href="javascript:void(0)" @click="showProjectDetail($event, index)" class="detail-icon"><i class="icon big zoom"></i></a>
           </div>
+          
         </Panel>
       </template>
     </Grid>
@@ -27,6 +31,12 @@
 <style scoped>
 .project-desc {
   min-height: 90px;
+}
+
+.detail-icon {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
 }
 </style>
 
@@ -43,6 +53,21 @@ export default {
     return {
       projects: json,
       selectedProject: {}
+    }
+  },
+  computed: {
+    compProjects(){
+      return this.projects.map((project, index)=>{
+        if(project.screenshots instanceof Array){
+          project.screenshots.forEach((photo, index)=>{
+            let filenamePrefix = "./screenshots/" + project.id + "-" + ("000" + (Number(index)+1) ).slice(-3);
+            let extension = "." + (photo.extension||"png");
+            photo.thumbnail = filenamePrefix + "-thumbnail" + extension;
+            photo.src = filenamePrefix + extension;
+          });
+        }
+        return project;
+      });
     }
   },
   components: {

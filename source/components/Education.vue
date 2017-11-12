@@ -1,5 +1,5 @@
 <template>
-  <Segment class="green secondary" header="Education" headerClass="brown">
+  <Segment class=" secondary" header="Education" headerClass="brown">
     <Grid :items="education" class="two column">
       <template slot-scope="{item}">
         <!-- <h4 class="ui header">{{item.degree}}

@@ -5,14 +5,17 @@
       
       <MyTitle/>
       <a name="profile"></a>
-      <About/>
-      <Experience/>
-      <Education/>
-      <PhotoswipePlaceholder/>
+      <About class="orange"/>
       <a name="projects"></a>
-      <Projects/>
+      <PhotoswipePlaceholder/>
+      <Projects class="yellow"/>
+
+      <a name="experience"></a>
+      <Experience class="green"/>
+      <Education class="blue"/>
+      
       <a name="contact"></a>
-      <Contact/>
+      <Contact class="purple"/>
     </div>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div class="panel">
-    <div class="ui orange inverted top attached segment">
+    <div class="ui green inverted top attached segment">
       <component :is="headerSize? 'h'+headerSize : 'h6'" :class="'ui header '+headerClass">
         {{header}}
         <span class="sub header" v-if="subHeader" v-html="subHeader" />

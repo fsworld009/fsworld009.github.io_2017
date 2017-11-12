@@ -3,7 +3,7 @@
     
     <!-- template for thumbnails -->
     <div>
-      <template v-for="(photo, index) in compPhotos" >
+      <template v-for="(photo, index) in photos" >
         <a :href="photo.src" class="screenshots-click" :key="index" @click.prevent="onShowPhoto">
           <img class="ui image" :title="photo.caption" :src="photo.thumbnail">&nbsp;
         </a>
@@ -56,7 +56,6 @@ var photoswipe = function(){
             return;
         }
         options.index = index;
-        console.log("before enter destroy", gallery);
         // destroy();
         gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
         gallery.init();
@@ -84,23 +83,11 @@ export default {
     }
   },
 
-  computed: {
-    compPhotos (){
-      return this.photos.map( (photo, index) => {
-        let filenamePrefix = "./screenshots/" + this.photoId + "-" + ("000" + (Number(index)+1) ).slice(-3);
-        let extension = "." + (photo.extension||"png");
-        photo.thumbnail = filenamePrefix + "-thumbnail" + extension;
-        photo.src = filenamePrefix + extension;
-        return photo;
-      });
-    }
-  },
-  
   methods: {
     initPhotoswipe(){
         photoswipe.clear_item();
-        if(this.compPhotos.length > 0){
-          this.compPhotos.forEach(function(photo, index){
+        if(this.photos.length > 0){
+          this.photos.forEach(function(photo, index){
             photoswipe.push_item(photo.src, photo.width, photo.height, photo.caption);
           });
         }
@@ -110,7 +97,6 @@ export default {
     onShowPhoto(event){
       
       let $el = $(event.currentTarget);
-      console.log("onShowPhoto", this, $el);
       this.initPhotoswipe();
       photoswipe.show($el.index());
     }

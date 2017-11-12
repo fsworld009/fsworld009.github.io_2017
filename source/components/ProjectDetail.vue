@@ -13,7 +13,7 @@
       
       <Photoswipe :photoId="project.id" :photos="project.screenshots" v-if="project.screenshots"/>
       
-      <h2 class="ui green header" v-if="project.links && project.links.length">Link(s)</h2>
+      <h4 class="ui red header" v-if="project.links && project.links.length">Link(s)</h4>
       <BulletedList :items="project.links" v-if="project.links && project.links.length">
         <template slot-scope="{item}">
           <a :href="item.url" target="_blank">{{item.name}}</a>
