@@ -83,11 +83,9 @@ export default {
         once: false,
         offset: 95,
         onTopVisible(){
-          console.log("onBottomPassed", this);
           $(this).addClass("visible");
         } ,
         onBottomVisible(){
-          console.log("onTopVisible", this);
           $(this).addClass("visible");
         }
       })
