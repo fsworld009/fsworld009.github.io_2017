@@ -3,19 +3,19 @@
     <MyMenu/>
     <div class="ui main container">
       
-      <MyTitle/>
+      <MyTitle class="main-segment"/>
       <a name="profile"></a>
-      <About class="orange"/>
+      <About class="main-segment orange"/>
       <a name="projects"></a>
       <PhotoswipePlaceholder/>
-      <Projects class="yellow"/>
+      <Projects class="main-segment yellow"/>
 
       <a name="experience"></a>
-      <Experience class="green"/>
-      <Education class="blue"/>
+      <Experience class="main-segment green"/>
+      <Education class="main-segment blue"/>
       
       <a name="contact"></a>
-      <Contact class="purple"/>
+      <Contact class="main-segment purple"/>
     </div>
   </div>
 </template>
@@ -23,6 +23,15 @@
 <style scoped>
 .main.container {
   margin-top: 7em;
+}
+.main-segment {
+  opacity: 0.1;
+  transition: opacity 2s;
+}
+
+.main-segment.visible {
+  opacity: 1;
+  
 }
 </style>
 
@@ -51,6 +60,38 @@ export default {
     Projects,
     PhotoswipePlaceholder,
     Contact
+  },
+
+  mounted(){
+    //$(this.$el).find(".main-segment").css("opacity",0)
+    this.initTransparency();
+  },
+  updated(){
+    this.initTransparency();
+  },
+  beforeDestroy(){
+    this.destroyTransparency();
+  },
+
+  methods: {
+    initTransparency(){
+      var $segments = $(this.$el).find(".main-segment");
+      $segments.visibility({
+        once: false,
+        offset: 95,
+        onTopVisible(){
+          console.log("onBottomPassed", this);
+          $(this).addClass("visible");
+        } ,
+        onBottomVisible(){
+          console.log("onTopVisible", this);
+          $(this).addClass("visible");
+        }
+      })
+    },
+    destroyTransparency(){
+
+    }
   }
 };
 </script>

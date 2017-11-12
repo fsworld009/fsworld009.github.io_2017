@@ -16,7 +16,9 @@
 
           <div class="ui container" style="height:80px">
             <template v-if="item.screenshots && item.screenshots[0]">
-              <a href="javascript:void(0)" @click="showProjectDetail($event, index)"><img :src="item.screenshots[0].thumbnail" width="80" height="80" align="bottom"/></a>
+              <a href="javascript:void(0)" @click="showProjectDetail($event, index)">
+                <img :data-src="item.screenshots[0].thumbnail" width="80" height="80" align="bottom"/>
+              </a>
             </template>
             <a href="javascript:void(0)" @click="showProjectDetail($event, index)" class="detail-icon"><i class="icon big zoom"></i></a>
           </div>
@@ -77,7 +79,26 @@ export default {
     ProjectDetail
     // SubSegments
   },
-  methods: {
+  mounted(){
+    $(this.$el).find("img").visibility({
+      type       : 'image',
+      transition : 'fade in',
+      duration   : 1000
+    });
+  },
+  updated(){
+    $(this.$el).find("img").visibility({
+      type       : 'image',
+      transition : 'fade in',
+      duration   : 1000
+    });
+  },
+  beforeDestroy(){
+    $(this.$el).find("img").visibility("destroy");
+  },
+  methods:{
+    
+
     showProjectDetail(event, index){
       this.$data.selectedProject = this.$data.projects[index];
     },
