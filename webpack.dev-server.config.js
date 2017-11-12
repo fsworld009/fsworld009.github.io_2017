@@ -77,6 +77,9 @@ var config = {
         //new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
         new ExtractTextPlugin('[name].bundle.css'),
+        // new webpack.LoaderOptionsPlugin({
+        //     debug: true
+        // }),
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"

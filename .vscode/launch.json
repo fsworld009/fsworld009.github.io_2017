@@ -13,9 +13,10 @@
             "webRoot": "${workspaceRoot}/source",
             "runtimeExecutable": "/usr/bin/google-chrome-stable",
             "sourceMaps": true,
-            // "skipFiles": [
-            //     "node_modules/**"
-            // ],
+            "skipFiles": [
+                "node_modules/**",
+                "index.bundle.js"
+            ],
             "sourceMapPathOverrides": {
                 "webpack:///*": "${workspaceRoot}/*"
             },
@@ -34,14 +35,24 @@
             "type": "firefox",
             "request": "launch",
             "reAttach": true,
-            "url": "http://localhost/index.html",
-            "webRoot": "${workspaceFolder}"
+            "url": "http://localhost:3000/",
+            "sourceMaps": "server",
+            "pathMappings": [{
+                "url": "webpack://",
+                "path": "${workspaceFolder}"
+            }]//,
+            // "log": {
+            //     "consoleLevel": {
+            //         "PathConversion": "Debug",
+            //         "default": "Error"
+            //     }
+            // }
         },
         {
             "name": "Attach Firefox",
             "type": "firefox",
             "request": "attach",
-            "sourceMaps": "server"
+            "sourceMaps": "client"
         },
         {
             "name": "Launch Firefox addon",
