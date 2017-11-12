@@ -3,6 +3,8 @@ var webpack = require('webpack');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 var config = {
     entry: {
@@ -74,7 +76,17 @@ var config = {
             // cssProcessor: require('cssnano'),
             cssProcessorOptions: { discardComments: { removeAll: true } },
             // canPrint: true
-          })
+        }),
+        new HtmlWebpackPlugin({ 
+            filename: '../index.html',
+            template: './source/index.template.html'
+        }),
+        new CopyWebpackPlugin([
+            {from: "./source/*.png", to: "../[name].[ext]",force: true },
+            {from: "./source/screenshots", to: "../screenshots",force: true, toType: "dir" },
+        ], {
+            // debug: "info"
+        })
     ]
 };
 module.exports=config;
