@@ -11,7 +11,7 @@
 
 <script>
 import Segment from "./semantic/Segment.vue";
-import SubSegments from "./semantic/SubSegments";
+import SubSegments from "./semantic/SubSegments.vue";
 let json = require("../json/contact");
 
 export default {

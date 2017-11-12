@@ -1,11 +1,18 @@
 var path = require('path');
 var webpack = require('webpack');
-
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var config = {
     entry: {
         index: [path.resolve(__dirname, 'source/index.js')]
+    },
+    output: {
+        path: path.resolve(__dirname, 'dist/bundle/'),
+        publicPath: "./bundle/",
+        filename: "[name].bundle.js",
+        chunkFilename: "[id].chunk.js"
     },
     resolve: {
         extensions: ['.js', '.vue', '.json'],
@@ -13,20 +20,8 @@ var config = {
           'vue$': 'vue/dist/vue.esm.js',
         }
     },
-    output: {
-        //path and public Path is meaningless when used by expressjs
-        path: path.resolve(__dirname, 'bundle/'),
-        publicPath: "/bundle/",
-        filename: "[name].bundle.js",
-        chunkFilename: "[id].chunk.js"
-    },
     module: {
         loaders: [
-            {
-              test: /\.js$/,
-              loader: 'webpack-module-hot-accept',
-              exclude: /(semantic.js)|(node_modules)/,
-            },
             {
                 test: /\.(js)$/,
                 loader: 'babel-loader',
@@ -45,17 +40,6 @@ var config = {
             {
                 test: /\.(vue)$/,
                 loader: 'vue-loader',
-                /*
-                options: {
-          loaders: {
-            {{#sass}}
-            // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
-            // the "scss" and "sass" values for the lang attribute to the right configs here.
-            // other preprocessors should work out of the box, no loader config like this necessary.
-            'scss': 'vue-style-loader!css-loader!sass-loader',
-            'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
-            {{/sass}}}
-                 */
             },
             { test: /\.json$/, loader: "json-loader" },
             { test: /\.css$/, loader: ExtractTextPlugin.extract({
@@ -65,32 +49,32 @@ var config = {
             }) },
             { test: /\.(png|jpg|gif)$/, loader: 'url-loader?limit=8192' }, // inline base64 URLs for <=8k images, direct URLs for the rest
             { test: /\.woff(2)?(\?v=[0-9\.]+)?$/,   loader: "url-loader?prefix=font/&limit=5000" },
-            { test: /\.(eot|ttf|svg)(\?v=[0-9\.]+)?$/,    loader: "url-loader?prefix=font/&limit=5000" },
-            // { test: require.resolve("jquery"), loader: "expose?$!expose?jQuery" },
-            // { test: require.resolve("lodash"), loader: "expose?_" },
+            { test: /\.(eot|ttf|svg)(\?v=[0-9\.]+)?$/,    loader: "url-loader?prefix=font/&limit=5000" }
         ]
     },
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
-        //new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
-        new ExtractTextPlugin('[name].bundle.css'),
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"
-        })
-  ],
-  devtool: "#source-map",
-  devServer: {
-      contentBase: './source/',
-      port: 3000,
-    //   historyApiFallback: {
-    //         index: '/',
-    //         rewrites: [
-    //           { from: /^\/config\/*/, to: '/config/'}
-    //       ]
-    //   }
-  }
-
+        }),
+        new webpack.DefinePlugin({
+            'process.env': {
+              NODE_ENV: '"production"'
+            }
+        }),
+        new UglifyJSPlugin({
+            test: /\.(js|vue)$/i,
+            uglifyOptions: {emca: 5}
+        }),
+        new ExtractTextPlugin('[name].bundle.css'),
+        new OptimizeCssAssetsPlugin({
+            assetNameRegExp: /\.bundle\.css$/g,
+            // cssProcessor: require('cssnano'),
+            cssProcessorOptions: { discardComments: { removeAll: true } },
+            // canPrint: true
+          })
+    ]
 };
 module.exports=config;
