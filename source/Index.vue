@@ -16,6 +16,7 @@
       
       <a name="contact"></a>
       <Contact class="main-segment purple"/>
+      <MyFooter/>
     </div>
   </div>
 </template>
@@ -45,6 +46,7 @@ import Projects from "./components/Projects.vue";
 import Contact from "./components/Contact.vue";
 import MyMenu from "./components/Menu.vue";
 import PhotoswipePlaceholder from "./components/PhotoswipePlaceholder.vue";
+import MyFooter from "./components/Footer.vue";
 export default {
   data (){
     return {
@@ -59,7 +61,8 @@ export default {
     Education,
     Projects,
     PhotoswipePlaceholder,
-    Contact
+    Contact,
+    MyFooter
   },
 
   mounted(){

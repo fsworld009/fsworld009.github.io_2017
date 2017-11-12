@@ -4,7 +4,7 @@
         <img src="protrait.png">
         <div class="content">
           <span style="font-size:3.2rem">Andy Lee</span>
-          <div class="sub header">Software developer specialized in javascript, Html, and CSS</div>
+          <div class="sub header">Software developer, Master of Science in Computer Science, Taiwanese</div>
         </div>
       </h1>
     </div>
