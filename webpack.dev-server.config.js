@@ -2,6 +2,8 @@ var path = require('path');
 var webpack = require('webpack');
 
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackHarddiskPlugin = require("html-webpack-harddisk-plugin");
 
 var config = {
     entry: {
@@ -78,7 +80,13 @@ var config = {
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"
-        })
+        }),
+        new HtmlWebpackPlugin({ 
+            filename: '../source/index.html',
+            template: './source/index.template.html',
+            alwaysWriteToDisk: true
+        }),
+        new HtmlWebpackHarddiskPlugin()
   ],
   devtool: "#source-map",
   devServer: {
