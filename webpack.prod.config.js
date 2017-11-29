@@ -5,6 +5,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const CleanWebpackPlugin = require('clean-webpack-plugin'); 
 
 var config = {
     entry: {
@@ -55,6 +56,7 @@ var config = {
         ]
     },
     plugins: [
+        new CleanWebpackPlugin("dist"),
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
         new webpack.ProvidePlugin({
