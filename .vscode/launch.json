@@ -18,17 +18,10 @@
                 "index.bundle.js"
             ],
             "sourceMapPathOverrides": {
-                "webpack:///*": "${workspaceRoot}/*"
+                "webpack:///source/*": "${webRoot}/*",
+                "webpack:///./*.js": "${workspaceRoot}/*.js"
             },
             "trace": true
-        },
-        {
-            "type": "chrome",
-            "request": "attach",
-            "name": "Attach to Chrome",
-            "port": 9222,
-            "webRoot": "${workspaceRoot}",
-            "sourceMaps": true
         },
         {
             "name": "Launch Firefox",
@@ -47,20 +40,6 @@
             //         "default": "Error"
             //     }
             // }
-        },
-        {
-            "name": "Attach Firefox",
-            "type": "firefox",
-            "request": "attach",
-            "sourceMaps": "client"
-        },
-        {
-            "name": "Launch Firefox addon",
-            "type": "firefox",
-            "request": "launch",
-            "reAttach": true,
-            "addonType": "addonSdk",
-            "addonPath": "${workspaceFolder}"
         }
     ]
 }

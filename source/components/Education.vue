@@ -10,7 +10,7 @@
             </div> 
           </div>  
         </h4> -->
-        <Segment borderClass="stacked" :header="item.degree" :subHeader="item.name + ', ' + item.dateString + ', ' + item.location" headerSize="4" headerClass="violet">
+        <Segment borderClass="stacked" :header="item.degree" :subHeader="item.name + ', ' + item.dateString + ', ' + item.location" headerSize="4" headerClass="teal">
           <div class="ui bulleted list" >
             <div class="item"> GPA: {{item.gpa}} </div>
           </div> 

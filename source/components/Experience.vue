@@ -20,7 +20,7 @@ export default {
     return {
       segmentProps: {
         headerSize: 4,
-        headerClass: "green"
+        headerClass: "teal"
       },
       segmentClass: "",
       positions: json
