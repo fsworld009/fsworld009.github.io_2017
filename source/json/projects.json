@@ -36,6 +36,56 @@
         ]
     },
     {
+        "id": "streamtvarray",
+        "title" : "Stream TV Array",
+        "date" : "Dec 2017",   
+        "skills" : ["HTML5", "CSS3", "Vue.js", "Semantic UI", "JSON"],
+        "brief": "Watch multiple streams in one screen with your preference.",
+        "description" : "Stream TV Array A utility web page to allow you to watch multiple streams on one screen, with the ability to show and hide chat box at will.",
+        "points" :
+        [
+            "Customize array width and height",
+            "Toggle chat box visibility",
+            "zSet transparency on chat box",
+            "Confirm popup before unload the page to prevent from accidentely closing or leaving the page",
+            "Auto load opened streams on page refresh as long as the tab is not closed"
+        
+        ],
+        "screenshots" :
+        [
+            {
+                "caption" : "2x2 Array Setting",
+                "width" : 1920,
+                "height" : 1040
+            },
+            {
+                "caption" : "1x3 Array Setting",
+                "width" : 1080,
+                "height" : 1880
+            },
+            {
+                "caption" : "Main Option Screen",
+                "width" : 881,
+                "height" : 467
+            },
+            {
+                "caption" : "Stream Option Screen",
+                "width" : 954,
+                "height" : 490
+            },
+            {
+                "caption" : "Chat will become full visible on mouse hover",
+                "width" : 1080,
+                "height" : 605
+            }
+        ],
+        "links" :
+        [
+            {"name":"Project page", "url":"https://fsworld009.github.io/StreamTvArray/"},
+            {"name":"Project GitHub", "url":"https://github.com/fsworld009/StreamTvArray/"}
+        ]
+    },
+    {
         "id": "myhomepage2017",
         "title" : "My Portfolio Homepage",
         "date" : "Nov 2017",   
