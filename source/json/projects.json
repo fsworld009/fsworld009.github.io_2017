@@ -1,5 +1,41 @@
 [
     {
+        "id": "snake",
+        "title" : "Snake",
+        "date" : "Aug 2018",   
+        "skills" : ["javascript", "JSON", "RPG Maker MV"],
+        "brief": "A Snake game made with RPG Maker MV",
+        "description" : "A Snake game made with RPG Maker MV. This is mostly an experiment about what I can do with RPG Maker MV's javascript engine ",
+        "points" :
+        [
+            "Wrote the game mostly in js, not too much with the built-in editor",
+            "Customized build script to minimize js scripts for web deployments"
+        ],
+        "screenshots" :
+        [
+            {
+                "caption" : "Title",
+                "width" : 818,
+                "height" : 656
+            },
+            {
+                "caption" : "In Game",
+                "width" : 818,
+                "height" : 656
+            },
+            {
+                "caption" : "Game over and final score",
+                "width" : 818,
+                "height" : 656
+            }
+        ],
+        "links" :
+        [
+            {"name":"Play the game", "url":"https://fsworld009.gitlab.io/rmmv-snake/"},
+            {"name":"Project GitHub", "url":"https://github.com/fsworld009/rmmv-snake/"}
+        ]
+    },
+    {
         "id": "myhomepage2017",
         "title" : "My Portfolio Homepage",
         "date" : "Nov 2017",   
@@ -505,7 +541,8 @@
         ],
         "links" :
         [
-            {"name":"Project GitHub", "url":"https://github.com/fsworld009/JavaFileRenamer"}
+          {"name":"Download the game", "url":"https://github.com/fsworld009/Xiangqi/releases"},
+          {"name":"Project GitHub", "url":"https://github.com/fsworld009/Xiangqi"}
         ]
     },
     {
@@ -590,7 +627,7 @@
         "links" :
         [
             {"name":"Download the game", "url":"https://github.com/fsworld009/Minesweeper_2006/releases"},
-            {"name":"Project GitHub", "url":"https://github.com/fsworld009/Calculator_2007"}
+            {"name":"Project GitHub", "url":"https://github.com/fsworld009/Minesweeper_2006"}
         ]
     }    
 ]
