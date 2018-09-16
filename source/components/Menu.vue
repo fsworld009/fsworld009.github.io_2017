@@ -38,7 +38,7 @@ export default {
       "menuItems":[
         {"icon":"user circle", "text":"Profile", "link":"#profile"},
         {"icon":"rocket", "text":"Projects", "link":"#projects"},
-        {"icon":"suitcase", "text":"Experience", "link":"#experience"},
+        // {"icon":"suitcase", "text":"Experience", "link":"#experience"},
         {"icon":"address book", "text":"Contact", "link":"#contact"},
         {"icon":"write", "text":"Blog", "link":"https://fsworld009.github.io/blog/", "target":"_blank"},
       ]

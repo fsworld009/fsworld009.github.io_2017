@@ -2,14 +2,8 @@
     {
         "icon": "mail",
         "color": "red",
-        "text": "Email (Primary)",
+        "text": "Email",
         "link": "mailto:fsworld009@gmail.com"
-    },
-    {
-        "icon": "mail",
-        "color": "red",
-        "text": "Email (Work-specific)",
-        "link": "mailto:lycecs9130@gmail.com"
     },
     {
         "icon": "github",
@@ -22,12 +16,6 @@
         "color": "teal",
         "text": "Twitter",
         "link": "https://twitter.com/fsworld009"
-    },
-    {
-        "icon": "linkedin square",
-        "color": "blue",
-        "text": "LinkedIn",
-        "link": "https://linkedin.com/in/lycecs9130"
     },
     {
         "icon": "pencil",

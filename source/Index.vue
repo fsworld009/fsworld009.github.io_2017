@@ -10,9 +10,9 @@
       <PhotoswipePlaceholder/>
       <Projects class="main-segment yellow"/>
 
-      <a name="experience"></a>
+      <!-- <a name="experience"></a>
       <Experience class="main-segment green"/>
-      <Education class="main-segment blue"/>
+      <Education class="main-segment blue"/> -->
       
       <a name="contact"></a>
       <Contact class="main-segment purple"/>
